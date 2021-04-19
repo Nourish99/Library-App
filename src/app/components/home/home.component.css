@@ -1,0 +1,103 @@
+
+
+#titulo{
+    background: url(https://www.wallpapertip.com/wmimgs/0-3795_wallpaper-books-library-shelves-lighting-hd-book-library.jpg);
+    height: 100vh;
+    width: 100%;
+    /* justify-content: start; */
+    display: flex;
+    justify-content: flex-end;
+    /* align-items:start; */
+    background-size: cover; 
+    color: white;   
+}
+#subs{
+    background-color: rgba(216, 215, 174, 0.823);
+    width: 40%;
+    height: 100vh;
+}
+#subs > p{   
+    color: rgb(0, 0, 0);
+    font-size: 18pt;
+    padding-left: 5%;
+    padding-top: 15%;
+    padding-right: 5%;
+    text-align: center;
+}
+#subs > h1{
+    font-size: 80pt;
+    color: rgb(27, 62, 70);
+    font-weight: 800;
+    text-align: center;    
+    padding-top: 10%
+}
+#boton{
+   
+    padding: 3%;
+    text-align: center;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    background-color: #82b085;
+    border-radius: 15px;
+    border: 3px double #006505;
+    /* width: 0%; */
+    margin-left: 30%;
+    margin-right: 30%; 
+    /* display: flex; */
+}
+#boton > a{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 20pt;
+    color: #006505
+}
+#boton:hover{
+   background-color:aliceblue;
+    
+}
+
+@media (max-width: 980px ) {
+    
+    #subs{
+        background-color: rgba(216, 215, 174, 0.823);
+        width: 100vw;
+    }
+    
+    #subs > h1{
+        font-size: 50pt;
+    }
+   
+}
+
+@media (max-width: 800){
+    .imgsCarousel{
+        height: 250px;
+    }
+   
+    .imagenesHome{
+        height: 200px;
+        width: 300px;
+    }
+  
+}
+#info{
+    background-color: rgb(221, 200, 178); 
+    width: 100%;
+    /* display: block; */
+
+}
+.titles{
+    font-size: 50pt;
+    font-weight: bolder;
+}
+.subs{
+    font-size: 16pt;
+}
+.imagenesHome{
+    height: 350px;
+    width: 550px;
+}
+
+.imgsCarousel{
+    height: 400px;
+}

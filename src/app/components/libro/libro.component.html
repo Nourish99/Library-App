@@ -1,0 +1,66 @@
+<section id="principal" class="container">
+    <div class="row" >
+        <h1 class="col-md-12 col-xs-8 col-sm-12 text-center titulo">{{Libro1.title}}</h1>
+    </div>
+    <div class="row pt-5">
+        <div class="col-md-4  col-xs-6 col-sm-12">
+            <img src="{{Libro1.cover}}" class="Portada" alt="">
+        </div>
+        <div class="col-md-6 offset-md-1 col-xs-6 col-sm-12">
+            <table class="table table-responsive">
+                <thead>
+                    <tr class="text-center">
+                        <th colspan="2">Informacion General</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>ISBN</strong></td>
+                        <td>{{Libro1.ISBN}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Titulo</strong></td>
+                        <td>{{Libro1.title}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Autor</strong></td>
+                        <td>{{Libro1.author}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fecha de edicion</strong></td>
+                        <td>{{Libro1.publisher_date | date:'fullDate' | uppercase}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Editorial</strong></td>
+                        <td>{{Libro1.publisher}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Num. Paginas</strong></td>
+                        <td>{{Libro1.pages}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lenguaje</strong></td>
+                        <td>{{Libro1.language}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sinopsis</strong></td>
+                        <td>{{Libro1.content}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Categoría</strong></td>
+                        <td>
+                            {{Libro1.category}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            <button class="btn btn-primary" type="button" (click)="obtenerLibro()">Obtener</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>  
+   
+    
+</section>

@@ -1,0 +1,74 @@
+<section id="principal" class="container">
+    <div class="row" >
+        <h1 class="col-md-12 col-xs-8 col-sm-12 text-center titulo">Ya casi es tuyo...</h1>
+        <p class="text-center subs">Registra tus datos y recibiras los links de lectura y de descarga.</p>
+    </div>
+    <div class="modal fade" role="dialog" id="cuenta-modal">
+        <div class="modal-dialog modal-lg ">
+            <div class="modal-content  bg-dark text-light">
+                <div class="modal-header">
+                    <img src="https://img.icons8.com/cotton/2x/26e07f/library.png" alt="" class="logo">
+                    <h5 class="modal-title" id="staticBackdropLabel">OLibrary</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="display:flex">
+                    <!-- <img class="img-responsive" src="" id="muestra_img"> -->
+                    <div class="info-modal text-center" >
+                        <h2>Gracias por apoyar esta causa</h2>
+                        <p>Siempre es mejor apoyarse entre todos</p>
+                        <hr class="m-4">
+                        <h3>Gracias {{User.nombre1}} {{User.apellidoP}} por ser uno mas de nuestra comunidad</h3>
+                        <p><strong>Disfruta tu libro: </strong> {{Libro1.title}} </p>
+                        <p><strong>Descarga: </strong> {{Libro1.url_download}}</p>
+                        <p><strong>Lectura: </strong> {{Libro1.url_read_online}}</p>
+                        <p *ngIf="User.donacion!=0.0"><strong>Gracias por tu donacion de:</strong>  {{User.donacion | currency: 'USD' :'symbol' }}</p> 
+                        <p *ngIf="User.donacion==0.0"><strong>Que malo No donaste :c {{User.donacion | currency: 'USD' :'symbol' }}</strong></p> 
+                    </div>
+                          
+                </div>          
+            </div>
+        </div>
+    </div>      
+    <hr class="m-3">
+    <div class="row pt-3">
+        <div class="col-md-6 offset-md-3 col-xs-12">
+            <h3 class="text-center">Llena el formulario correctamente para obtener los links.</h3>
+            <!-- <form (ngSubmit)="onSubmit(f)" #f="ngForm"> -->
+            <form>
+                <div class="input-group mb-3">
+                    <label for="1nombre" class="input-group-text" >Nombre</label>
+                    <input type="text" class="form-control" placeholder="Primer Nombre" id="nombre1" name="nombre1" [(ngModel)]="User.nombre1">
+                </div>
+                <div class="input-group mb-3">
+                    <label for="2nombre" class="input-group-text" >Nombre</label>
+                    <input type="text" class="form-control" placeholder="Segundo Nombre" id="nombre2" name="nombre2" [(ngModel)]="User.nombre2" >
+                </div>
+                <div class="input-group mb-3">
+                    <label for="apellidoPa" class="input-group-text" >Apellido Paterno</label>
+                    <input type="text" class="form-control" placeholder="Apellido Paterno" id="apellidoP" name="apellidoP" [(ngModel)]="User.apellidoP" >
+                </div>
+                <div class="input-group mb-3">
+                    <label for="apellidoma" class="input-group-text" >Apellido Materno</label>
+                    <input type="text" class="form-control" placeholder="Apellido Materno" id="apellidoM" name="apellidoM" [(ngModel)]="User.apellidoM" >
+                </div>
+                <div class="input-group mb-3" >
+                    <label for="fecha_nac" class="input-group-text">Fecha de nacimiento.</label>
+                    <input type="date" class="form-control" id="fechaNac" name="fechaNac" [(ngModel)]="User.fechaNac"  required>
+                </div>
+               <div class="input-group mb-3" >
+                <label for="emailAdd" class="input-group-text">Email address</label>
+                <input type="email" class="form-control" id="emailAdd" placeholder="name@example.com" name="emailAdd" [(ngModel)]="User.emailAdd" required pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+               </div>
+               <div class="input-group mb-3" >
+                <label for="donacion" class="input-group-text">Donacion $</label>
+                <input type="number" class="form-control" id="donacione" name="donacione" placeholder="0.0" [(ngModel)]="User.donacion" >
+               </div>
+                <div class="mb-3 text-center">
+                    <input type="submit" value="Obtener" class="btn-primary form-control-lg" (click)="validar()">
+                    <!-- [disabled]="f.invalid"   *ngIf="!f.invalid" -->
+                </div>
+               
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,40 @@
+<section id="principal" class="container">
+    <div class="row" >
+        <h1 *ngIf="categos=='todos'" class="col-md-12 col-xs-8 col-sm-12 text-center titulo">CATALOGO</h1>
+        <h1 *ngIf="categos!='todos'" class="col-md-12 col-xs-8 col-sm-12 text-center titulo">Libros de {{categos}}</h1>
+    </div> 
+    <div class="row">
+
+    </div> 
+    <div class="container pb-5">
+        <div *ngIf="categos=='todos'" class="row show-grid">
+            <div *ngFor ="let libroC of LibrosB; let i = index" class="col-lg-3 col-md-4 col-xs-6 thumb pt-4" >
+                <div class="card rounded shadow-sm border-4 border-white text-white bg-dark" >
+                    <img src="{{libroC.cover}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{libroC.title}}</h5>
+                      <p class="small text-muted font-italic">{{libroC.author}}</p>
+                      <p class="small text-muted font-italic">{{libroC.content | slice: 0:80}} ....</p>
+                      <p class="small text-muted font-italic">{{libroC.publisher_date | date:"fullDate"}}</p>
+                      <a class="btn btn-success" (click)="enviarInfo(i, false)" >Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="categos!='todos'" class="row show-grid">
+            <div *ngFor ="let libroC of Libs; let i = index" class="col-lg-3 col-md-4 col-xs-6 thumb pt-4" >
+                <div class="card rounded shadow-sm border-4 border-white text-white bg-dark" >
+                    <img src="{{libroC.cover}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{libroC.title}}</h5>
+                      <p class="small text-muted font-italic">{{libroC.author}}</p>
+                      <p class="small text-muted font-italic">{{libroC.content | slice: 0:80}} ....</p>
+                      <p class="small text-muted font-italic">{{libroC.publisher_date | date:"fullDate"}}</p>
+                      <a class="btn btn-success" (click)="enviarInfo(i, true)" >Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>

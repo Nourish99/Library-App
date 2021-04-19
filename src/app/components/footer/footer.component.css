@@ -1,0 +1,39 @@
+/* Footer */
+.footer{
+    background: #000000;
+    color: #8A8A8A;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.footer p{
+    color: #8A8A8A;
+}
+
+.footer h3{
+    color: #FFF;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.app-logo{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+.footer hr{
+    border: none;
+    background: #B5B5B5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.logo{
+    height: 150px;
+    width: 150px;
+}

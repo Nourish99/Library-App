@@ -1,0 +1,44 @@
+#principal{
+    padding-bottom: 10%;
+    padding-top: 5%;
+}
+
+
+.imagen{
+    height: 350px;
+    width: 90%;
+}
+
+img:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.titulo{
+    font-size: 40pt;
+    font-weight: bolder;
+    color:rgb(33, 48, 83);
+    background-color: rgba(155, 206, 206, 0.959);
+    padding-bottom: 5%;
+    padding-top: 5%;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.info-modal{
+    padding-left: 10%;
+    padding-top: 5%;
+}
+.imagen-most{
+    height:400px;
+    width: 100%;
+}
+#body_mol{
+    display:flex;
+}
+
+@media (max-width: 800px){
+    #body_mol{
+        display:block;
+    }
+}

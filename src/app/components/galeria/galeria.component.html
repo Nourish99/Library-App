@@ -1,0 +1,33 @@
+<section id="principal" class="container">
+    <div class="row" >
+        <h1 class="col-md-12 col-xs-8 col-sm-12 text-center titulo">Las 10 portadas mas iconicas en los libros.</h1>
+    </div>
+   <div class="modal fade" role="dialog" id="imgmodal">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content  bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">OLibrary</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"  id="body_mol">
+                <img class="img-responsive imagen-most" src="" id="muestra_img">
+                <div class="info-modal" >
+                    <h3 id="tit-img"></h3>
+                    <br><br>
+                    <p id="desc-img" ></p> 
+                </div>
+                      
+            </div>          
+        </div>
+    </div>
+    </div>      
+    <div class="container">
+        <div class="row show-grid">
+            <div *ngFor ="let imagen of imagenes; let i = index" class="col-lg-3 col-md-4 col-xs-6 thumb pt-4" >
+                <img src={{imagen.url}}  class="zoom img-fluid img-thumbnail imagen" id="{{i}}" name="{{imagen.autor}}.  {{imagen.description}}"  alt="{{imagen.title}}" (click)="ponerEvento()">
+                <!-- data-desc="{{imagen.description}}" -->
+            </div>
+        </div>
+    </div>
+    
+</section>

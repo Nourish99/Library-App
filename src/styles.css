@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background: url(https://c1.wallpaperflare.com/preview/281/150/428/various-book-books.jpg) 
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}

@@ -1,0 +1,19 @@
+
+.titulo{
+    font-size: 55pt;
+    font-weight: 900;
+    background-color: rgba(76, 55, 35, 0.83);
+    color:beige;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 200px;
+    margin-top: 5%;
+}
+.cartita{
+    display: flex;
+}
+
+@media (max-width: 768px){
+    .titulo{
+        font-size:40pt;
+    }
+}
